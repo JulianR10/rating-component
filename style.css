@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #fb7413;
+    --white: #ffffff;
+    --light-grey: #959eac;
+    --medium-grey: #7c8798;
+    --dark-grey: #252d37;
+    --very-dark-blue: #121417;
+}
+
+html{
+    font-size: 15px;
+    font-family: 'Overpass';
+    color: var(--light-grey);
+}
+
+.container-component{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--very-dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.component{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+    height: 300px;
+    padding: 20px;
+    gap: 15px;
+    border-radius: 20px;
+    background: linear-gradient(120deg, rgb(39, 39, 39) 0%, rgba(23,30,40,1) 100%);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.container-img{
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-grey);
+    border-radius: 100%;
+}
+
+.container-img img{
+    width: 100%;
+}
+
+.title{
+    color: var(--white);
+}
+
+.paragraph{
+    font-size: 0.9rem;
+}
+
+.numbers{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.numbers .numbers__element{
+    background-color: var(--dark-grey);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 100%;
+    color: var(--light-grey);
+    transition: 0.3s;
+}
+
+.numbers__element:hover{
+    background-color: var(--light-grey);
+    color: white;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.numbers__element:focus{
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.submit{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.submit:hover{
+    background-color: var(--white);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.submitted-state{
+    align-items: center;
+}
+
+.submitted-state p:last-child{
+    text-align: center;
+}
+
+@media only screen and (max-width: 375px){
+    .component{
+        width: 100%;
+        padding: 15px;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
